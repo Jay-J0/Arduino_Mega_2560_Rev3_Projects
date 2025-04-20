@@ -9,9 +9,8 @@
  *
  * The SEGMENTS array stores the binary patterns for each digit (0-9) to be displayed.
  *
- * The tm_displayDigits function sends the digits to the display, setting it to auto-increment mode and turning on the display with brightness level 7.
- *
- * The main loop continuously displays the numbers "1234" for 1 second, then "8888" for 1 second, and repeats.*/
+ * The tm_displayDigits function sends the digits to the display, setting it to auto-increment mode and turning on the
+ * display with brightness level 7.*/
 
 // Set CPU clock speed for accurate delays
 #define F_CPU 16000000UL
@@ -106,16 +105,17 @@ void tm_writeByte(uint8_t b) {
 //
 
 const uint8_t SEGMENTS[] = { //SEGMENTS[] is an array of 8-bit values (uint8_t).
-    0b00111111, // 0
-    0b00000110, // 1
-    0b01011011, // 2
-    0b01001111, // 3
-    0b01100110, // 4
-    0b01101101, // 5
-    0b01111101, // 6
-    0b00000111, // 7
-    0b01111111, // 8
-    0b01101111  // 9
+    //DIGITS
+    0b00111111, // Number: 0 at index 0
+    0b00000110, // Number: 1 at index 1
+    0b01011011, // Number: 2 at index 2
+    0b01001111, // Number: 3 at index 3
+    0b01100110, // Number: 4 at index 4
+    0b01101101, // Number: 5 at index 5
+    0b01111101, // Number: 6 at index 6
+    0b00000111, // Number: 7 at index 7
+    0b01111111, // Number: 8 at index 8
+    0b01101111,  // Number: 9 at index 9
 };
 
 //
@@ -155,26 +155,27 @@ int main(void) {
 
     while (1) {
         tm_displayDigits(1, 2, 3, 4);  // Display "1234"
-        _delay_ms(1000);              // Wait 1 second
+        _delay_ms(1000);
 
-        tm_displayDigits(8, 8, 8, 8);  // Display "8888"
-        _delay_ms(1000);              // Wait 1 second
+        tm_displayDigits(9, 8, 7, 6);  // Display "1234"
+        _delay_ms(1000);
+
     }
 
     return 0;
 }
 
 /*
- -- a --
-|       |
-f       b
-|       |
+ - - a --
+ |       |
+ f       b
+ |       |
  -- g --
-|       |
-e       c
-|       |
+ |       |
+ e       c
+ |       |
  -- d --   (and sometimes dp = decimal point)
 
-Bits are mapped as:
-Bit:    0  1  2  3  4  5  6  7
-Seg:    a  b  c  d  e  f  g  dp */
+ Bits are mapped as:
+ Bit:    0  1  2  3  4  5  6  7
+ Seg:    a  b  c  d  e  f  g  dp */
