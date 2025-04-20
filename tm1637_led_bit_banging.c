@@ -163,3 +163,18 @@ int main(void) {
 
     return 0;
 }
+
+/*
+ -- a --
+|       |
+f       b
+|       |
+ -- g --
+|       |
+e       c
+|       |
+ -- d --   (and sometimes dp = decimal point)
+
+Bits are mapped as:
+Bit:    0  1  2  3  4  5  6  7
+Seg:    a  b  c  d  e  f  g  dp */
