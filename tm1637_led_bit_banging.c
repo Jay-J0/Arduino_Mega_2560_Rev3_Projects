@@ -157,7 +157,7 @@ int main(void) {
         tm_displayDigits(1, 2, 3, 4);  // Display "1234"
         _delay_ms(1000);
 
-        tm_displayDigits(9, 8, 7, 6);  // Display "1234"
+        tm_displayDigits(9, 8, 7, 6);  // Display "9876"
         _delay_ms(1000);
 
     }
