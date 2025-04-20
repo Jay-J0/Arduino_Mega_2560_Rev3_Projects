@@ -105,7 +105,7 @@ void tm_writeByte(uint8_t b) {
 // Each byte represents a 7-segment pattern (bits: a–g + dp)
 //
 
-const uint8_t SEGMENTS[] = {
+const uint8_t SEGMENTS[] = { //SEGMENTS[] is an array of 8-bit values (uint8_t).
     0b00111111, // 0
     0b00000110, // 1
     0b01011011, // 2
