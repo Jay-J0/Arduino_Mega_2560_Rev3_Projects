@@ -18,5 +18,4 @@ SCREEN FOR USART:
 **screen -ls** → List screen sessions    
 **screen -X -S <session_id> quit** → Quit session    
 **screen -r <session_id>** → Reattach to session    
-**Ctrl + D** → While in screen session, terminate session    
 **Ctrl + A, then D** → This will detach the screen session — it's still running in the background.    
