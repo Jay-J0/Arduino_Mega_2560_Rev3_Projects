@@ -8,7 +8,7 @@ LINUX COMMANDS:
 **ls /dev/ | grep ACM** → Check which USB port connects to the board  
 **avrdude -c wiring -p m2560 -P /dev/ttyACM0 -b 115200 -v** → Test connection with the board   
 **make** → Compiles everything   
-**make upload** → Flashes the .hex file to your Arduino   
+**make upload** → Flashes the .hex file to Arduino   
 **make clean** → Deletes .elf and .hex files to rebuild from scratch     
    
 ________________________________________________________________________________________________    
