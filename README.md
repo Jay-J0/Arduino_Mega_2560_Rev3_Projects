@@ -10,4 +10,4 @@ Linux commands:
 **make** → Compiles everything   
 **make upload** → Flashes the .hex file to your Arduino   
 **make clean** → Deletes .elf and .hex files to rebuild from scratch      
-**screen /dev/ttyACM0 9600** → Open a Serial Terminal with screen
+**screen /dev/ttyACM0 115200** → Open a Serial Terminal with screen
