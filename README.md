@@ -7,7 +7,7 @@ Atmel: https://ww1.microchip.com/downloads/en/devicedoc/atmel-2549-8-bit-avr-mic
 Linux commands:   
 **ls /dev/ | grep ACM** → Check which USB port connects to the board  
 **avrdude -c wiring -p m2560 -P /dev/ttyACM0 -b 115200 -v** → Test connection with the board   
-**make** → compiles everything   
-**make upload** → flashes the .hex file to your Arduino   
-**make clean** → deletes .elf and .hex files to rebuild from scratch   
-
+**make** → Compiles everything   
+**make upload** → Flashes the .hex file to your Arduino   
+**make clean** → Deletes .elf and .hex files to rebuild from scratch      
+**screen /dev/ttyACM0 9600** → Open a Serial Terminal with screen
